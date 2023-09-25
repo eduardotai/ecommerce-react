@@ -29,14 +29,27 @@ export function Shop() {
             <a className={classes.link} href="/Shop">Shop</a>
             <div className={classes.shopDisplayProducts}>
           
-                {products.map(product => (
-                    <div className={classes.product} key={product.id}>
-                        <img className={classes.imagesOfProduct} src={product.image} alt={product.title} />
-                        <p className={classes.titleProduct}>{product.title}</p>
-                        <p>Price: Free</p>
-                        <button> Buy </button>
-                    </div>
-                ))}
+            {products.map(product => (
+    <div className={classes.product} key={product.id}>
+        <div className={classes.cellContainer}>
+            <div className={classes.imagesOfProduct}>
+                <img src={product.image} alt={product.title} />
+            </div>
+            <div>
+                <p className={classes.titleProduct}>{product.title}</p>
+            </div>
+            <div className={classes.priceProduct}>
+                <p className={classes.price}>Price: Free</p>
+            </div>
+            <div className={classes.button}>
+                <button>Buy</button>
+            </div>
+        </div>
+    </div>
+))}
+
+
+                        
             </div>
         </div>
     )

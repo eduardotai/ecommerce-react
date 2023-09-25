@@ -26,3 +26,8 @@ nav {
     font-size:  20px;
     right: 21rem;
 }
+
+.redirectTo {
+    color: white;
+    text-decoration: none;
+}
