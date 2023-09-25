@@ -1,0 +1,66 @@
+.shopSubTitle {
+    position: absolute;
+    margin: 0;
+    font-size: 27px;
+    color: black;
+    left: 1rem; /* ajustado para ficar com espaço à esquerda */
+    top: 9rem; /* ajustado para ficar com espaço no topo */
+    font-weight: 900;
+    z-index: 1; /* adicionado para garantir que fique por cima dos outros elementos */
+}
+
+.link {
+    text-decoration: none;
+    font-size: 18px;
+    position: relative; /* ajustado para absolute para ter mais controle de posição */
+    left: 1rem; /* ajustado para ficar com espaço à esquerda */
+    top: 11rem; /* ajustado para ficar abaixo do .shopSubTitle */
+    color: black;
+    z-index: 1; /* adicionado para garantir que fique por cima dos outros elementos */
+}
+
+.shopDisplayProducts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    width: 100%;
+    height: 300%;
+    gap: 2rem;
+    position: relative;
+    top: 12rem;
+    background-color: #ededed;
+    justify-content: center;
+}
+
+.shopDisplayProducts > div { /* Seleciona cada div (ou célula) diretamente dentro do .shopDisplayProducts */
+    display: flex;
+    flex-direction: column; /* Os filhos serão empilhados verticalmente */
+    justify-content: center; /* Centraliza os filhos verticalmente */
+    align-items: center; /* Centraliza os filhos horizontalmente */
+    background-color: #fff;
+    border: 2px solid #ededed;
+}
+
+.imagesOfProduct {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem; 
+    width: 150px;
+    background-color: #fff;
+}
+
+.titleProduct {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    position: relative;
+    z-index: 0; /* para garantir que o .link e o .shopSubTitle fiquem por cima */
+}
+
+button {
+    padding: .5rem;
+    width: 6rem;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
